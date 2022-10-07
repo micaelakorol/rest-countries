@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <h2>Where in the word?</h2>
+        <h3>Where in the word?</h3>
         <button className="theme" onClick={() => changeTheme()}>
           {" "}
           <img src={theme ? moonFill : moon} alt="theme-light-dark" />{" "}
