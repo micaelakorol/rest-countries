@@ -46,7 +46,7 @@ const CardCountries = () => {
                   <p key={uuidv4()} className="title-card">
                     {item.name}
                   </p>
-                  <section className="info-card" tabindex="0">
+                  <section className="info-card">
                     <p>
                       <b>Population:</b> {item.population}
                     </p>
