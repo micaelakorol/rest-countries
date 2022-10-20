@@ -14,6 +14,7 @@ const Nav = () => {
     handleChange,
     searchParams,
   } = useContext(Context);
+  
   const regionFilter = async (value) => {
     if (value.length > 0 || value !== "") {
       setMostrarCard(false);
