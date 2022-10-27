@@ -4,8 +4,9 @@ import App from './App';
 import './styles/global.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Error from './Pages/Error'
-import InfoCard from './components/Cards/InfoCard';
-import Nav from './components/Nav/Nav'
+import InfoCard from './Pages/InfoCard';
+import Nav from './Pages/Nav';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

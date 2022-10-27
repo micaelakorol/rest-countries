@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import "../../styles/nav.css";
-import "../../styles/global.css";
-import search from "../../icons/search.svg";
-import { Context } from "../../context/Context";
-import CardCountries from "../Cards/CardCountries";
+import "../styles/nav.css";
+import "../styles/global.css";
+import search from "../icons/search.svg";
+import CardCountries from "../components/Cards/CardCountries";
+import { Context } from "../context/Context";
 
 const Nav = () => {
   const {

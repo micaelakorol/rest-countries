@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import { useData } from '../../services/service'
-import Spinners from '../Pures/Spinners'
-import '../../styles/infoCard.css'
+import { useData } from '../services/service'
+import Spinners from '../components/Pures/Spinners'
+import '../styles/infoCard.css'
 import { v4 as uuidv4 } from 'uuid';
-import arrowLeft from '../../icons/arrow-left.svg'
+import arrowLeft from '../icons/arrow-left.svg'
 const InfoCard = () => {
 
 let params = useParams()
