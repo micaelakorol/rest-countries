@@ -4,7 +4,7 @@ import "../styles/global.css";
 import search from "../icons/search.svg";
 import CardCountries from "../components/Cards/CardCountries";
 import { Context } from "../context/Context";
-
+//pendiente: separar funcion regionFilter
 const Nav = () => {
   const {
     setMostrarCard,
