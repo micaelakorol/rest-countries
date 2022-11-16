@@ -17,7 +17,7 @@ const InfoCard = () => {
   if (error !== "") {
     return alert("Error");
   }
-
+console.log(data)
   return (
     <main>
       {data.map((data) => (
@@ -43,17 +43,19 @@ const InfoCard = () => {
                 <p>Population: {data.population}</p>
                 <p>Region: {data.region}</p>
                 <p>Sub Region: {data.subregion} </p>
-                <p>Capital: {data.capital}</p>
+                <p>Capital: 
+                {data.capital ? data.capital : '-'}
+                </p>
               </section>
               <section className="other-info">
                 <p>Top Level Domain: {data.topLevelDomain}</p>
-                <p>Currencies: {data.currencies[0].code}</p>
+                <p>Currencies: {data.currencies ? data.currencies[0].code : '-'}</p>
                 <p>Languages: {data.languages[0].name}</p>{" "}
               </section>
               <section className="geographical">
                 <p>
                   Border Countries:{" "}
-                  {data.borders ? data.borders.slice(0, 3).join("-") : null}
+                  {data.borders ? data.borders.slice(0, 3).join("-") : '-'}
                 </p>
               </section>
             </div>
