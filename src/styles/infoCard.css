@@ -1,5 +1,4 @@
 .container-dinamic {
-  background-color: var(--veryGrayLight);
   height: 100vh;
 }
 /*img country*/
@@ -39,6 +38,7 @@
   width: 100px;
   max-width: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: gray;
 }
 
 @media (max-width: 768px) {

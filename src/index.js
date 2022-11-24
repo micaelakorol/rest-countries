@@ -6,10 +6,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error from "./Pages/Error";
 import InfoCard from "./Pages/InfoCard";
 import Nav from "./Pages/Nav";
-
+import './styles/global.css'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
@@ -19,5 +18,4 @@ root.render(
         </Route>
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
 );

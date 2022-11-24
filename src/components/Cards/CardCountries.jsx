@@ -6,7 +6,6 @@ import Spinners from "../Pures/Spinners";
 import CardCountriesUI from "./UI/CardCountriesUI";
 
 const CardCountries = () => {
- 
   const { data, loading, error } = useData("https://restcountries.com/v2/all");
   if (loading) {
     return <Spinners />;
@@ -15,10 +14,10 @@ const CardCountries = () => {
     return alert("Error");
   }
   return (
-   <>
-   <CardCountriesUI data={data} />
-   <CardRegion/>
-   </>
+    <>
+      <CardCountriesUI data={data} />
+      <CardRegion />
+    </>
   );
 };
 

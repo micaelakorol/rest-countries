@@ -4,32 +4,11 @@ import "../styles/global.css";
 import search from "../icons/search.svg";
 import CardCountries from "../components/Cards/CardCountries";
 import { Context } from "../context/Context";
-//pendiente: separar funcion regionFilter
+import { RegionFilter } from "../services/requestNav";
+import { select } from "../components/InitialValues/select";
 const Nav = () => {
-  const {
-    setMostrarCard,
-    setRegionCountries,
-    value,
-    captureOption,
-    handleChange,
-    searchParams,
-  } = useContext(Context);
-  
-  const regionFilter = async (value) => {
-    if (value.length > 0 || value !== "") {
-      setMostrarCard(false);
-      const url = `https://restcountries.com/v2/region/${value}`;
-      try {
-        const res = await fetch(url);
-        const data = await res.json();
-        setRegionCountries(data);
-      } catch (error) {
-        return error;
-      }
-    } else {
-      setMostrarCard(true);
-    }
-  };
+  const { value, captureOption, handleChange, searchParams } = useContext(Context);
+  const { regionFilter } = RegionFilter();
   return (
     <>
       <nav className="container-nav">
@@ -47,21 +26,16 @@ const Nav = () => {
           />
         </div>
         <div className="select">
-          <select
-            name="select"
-            value={value}
-            onChange={captureOption}
-            onClick={() => regionFilter(value)}
-          >
+          <select name="select" value={value} onChange={captureOption}>
             <option value="" defaultValue={value} disabled>
               Filter by region
             </option>
             <option value="">All Countries</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
+            {select.map((item) => (
+              <option key={item.id} onClick={() => regionFilter(value)}>
+                {item.continent}
+              </option>
+            ))}
           </select>
         </div>
       </nav>
