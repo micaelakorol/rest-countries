@@ -17,6 +17,7 @@ const InfoCard = () => {
   if (error !== "") {
     return alert("Error");
   }
+
   return (
     <main>
       {data.map((data) => (
