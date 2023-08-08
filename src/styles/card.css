@@ -1,0 +1,47 @@
+.container-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-countries {
+  font-family: "Nunito Sans", sans-serif;
+  width: 230px;
+  max-width: 100%;
+  min-height: 280px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+
+.card-body img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 0.7rem;
+}
+
+.title-card {
+  font-weight: 800;
+  margin-left: 1rem;
+}
+.info-card {
+  margin-left: 1rem;
+}
+
+p > b {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: var(--dark);
+}

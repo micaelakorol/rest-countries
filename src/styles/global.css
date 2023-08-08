@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Bebas+Neue&family=Courier+Prime&family=Cutive&family=IM+Fell+DW+Pica+SC&family=JetBrains+Mono:wght@100;500&family=Josefin+Sans:wght@600&family=Kumbh+Sans:wght@200;700&family=Mohave&family=Mukta:wght@300&family=Nanum+Gothic&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,800;1,400&family=PT+Serif&family=Poppins:wght@300;400;500;700&family=Quicksand:wght@300&family=Roboto+Mono:wght@200;500&family=Schoolbell&family=Silkscreen&display=swap");
+#root {
+  --darkBlue: hsl(209, 23%, 22%);
+  --veryDarkBlue: hsl(207, 26%, 17%);
+  --veryDarkblue2: hsl(200, 15%, 8%);
+  --darkGray: hsl(0, 0%, 52%);
+  --veryGrayLight: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --dark:"#000"
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.themeLight {
+  background: var(--white);
+  color: var(--veryDarkBlue);
+  transition: all 0.5s;
+}
+
+.themeDark {
+  background: var(--darkBlue);
+  color: var(--white);
+  transition: all 0.5s;
+}

@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid rgba(237, 231, 231, 0.457);
+  padding: 0 1.5rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header button {
+  padding: 0.8rem;
+  border: none;
+  font-weight: 600;
+  height: auto;
+  background: none;
+}
+
+header img {
+  margin: 0.8rem 0.3rem 0 0;
+}
+
+header .title{
+  margin-top: .6rem;
+  font-size: 1.1rem;
+}
