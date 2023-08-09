@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/infoCard.css'
+import "../../../styles/infoCard.css";
 const CardBody = ({ data }) => {
   return (
     <section className="body-card">

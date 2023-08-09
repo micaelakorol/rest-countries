@@ -7,7 +7,6 @@ const Header = ({ theme, setTheme }) => {
   const changeTheme = () => {
     setTheme(!theme);
   };
-
   return (
     <>
       <header>

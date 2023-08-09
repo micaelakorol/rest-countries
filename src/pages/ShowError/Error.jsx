@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Error = () => {
   return (
-    <div>Error</div>
-  )
-}
+    <section>
+      <h1> Error 404 :(</h1>
+    </section>
+  );
+};
 
-export default Error
+export default Error;

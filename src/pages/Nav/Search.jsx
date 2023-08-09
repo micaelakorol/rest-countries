@@ -1,7 +1,10 @@
+import React, { useContext } from "react";
+import { Context } from "../../context/Context";
 import "../../styles/nav.css";
-import HandleChangeParams from "../../services/functions/handleChangeParams";
-const InputSearch = () => {
-  const { handleChange, searchParams } = HandleChangeParams();
+
+const Search = () => {
+  const { handleChange, searchParams } = useContext(Context);
+
   return (
     <section className="section-input">
       <input
@@ -15,4 +18,4 @@ const InputSearch = () => {
   );
 };
 
-export default InputSearch;
+export default Search;

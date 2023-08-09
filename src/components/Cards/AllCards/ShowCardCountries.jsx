@@ -6,27 +6,25 @@ import CardBodyCountries from "./CardElements/CardBodyCountries";
 import InfoCardCountries from "./CardElements/InfoCardCountries";
 import FilterCountries from "../../../services/functions/filterCountries";
 
-const CardCountriesUI = ({ data }) => {
+const ShowCardCountries = ({ data }) => {
   const { mostrarCard } = useContext(Context);
-  const {filterCountries} = FilterCountries()
+  const { filterCountries } = FilterCountries();
   return (
     <main>
       {mostrarCard && (
         <div className="container-card">
-          {data
-            .filter(filterCountries)
-            .map((item) => (
-              <div className="card-countries" key={uuidv4()}>
-                <section className="card-body">
-                 <CardBodyCountries item={item}/>
-                 <InfoCardCountries item={item}/>
-                </section>
-              </div>
-            ))}
+          {data.filter(filterCountries).map((item) => (
+            <div className="card-countries" key={uuidv4()}>
+              <section className="card-body">
+                <CardBodyCountries item={item} />
+                <InfoCardCountries item={item} />
+              </section>
+            </div>
+          ))}
         </div>
       )}
     </main>
   );
 };
 
-export default CardCountriesUI;
+export default ShowCardCountries;

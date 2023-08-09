@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import UserProvider from "./context/Context";
 import "./styles/global.css";
 const App = () => {
-  // const {theme} = useContext(Context)
   const [theme, setTheme] = useState(false);
 
   return (
