@@ -3,7 +3,6 @@ import { Context } from "../../context/Context";
 import { RegionFilter } from "../../services/API/requestNav";
 import { select } from "../../services/initialValuesSelect/select";
 import CaptureOption from "../../services/functions/captureOption";
-
 const SelectFilter = () => {
   const { value } = useContext(Context);
   const { captureSelect } = CaptureOption();

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 export const Context = createContext();
-
 const UserProvider = ({ children }) => {
   const [theme, setTheme] = useState(false);
   const [mostrarCard, setMostrarCard] = useState(true);
@@ -12,8 +11,6 @@ const UserProvider = ({ children }) => {
   const [regionCountries, setRegionCountries] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
-
-
   return (
     <Context.Provider
       value={{
@@ -26,7 +23,9 @@ const UserProvider = ({ children }) => {
         region,
         setRegion,
         regionCountries,
-        setRegionCountries,searchParams, setSearchParams,
+        setRegionCountries,
+        searchParams,
+        setSearchParams,
         loading,
         setLoading,
       }}
