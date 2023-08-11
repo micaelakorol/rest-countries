@@ -5,8 +5,8 @@ import {
 } from "react-router-dom";
 import App from "../../App";
 import InfoCard from "../ShowCountry/Card";
-import Error from "../ShowError/Error";
 import Nav from "../../components/Nav/Nav";
+import Error from "../ShowError/Error";
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>

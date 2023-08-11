@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../../context/Context";
 import "../../../styles/card.css";
 import { v4 as uuidv4 } from "uuid";
 import CardBody from "./CardElements/CardBody";
 import InfoAboutCard from "./CardElements/InfoAboutCard";
-import FilterCountries from "../../../services/functions/filterCountries";
-// Show filtered countries
+import FilterCountries from "../../../services/functions/FilterCountries";
+/* Show filtered countries*/
 const ShowCardRegion = () => {
   const { regionCountries } = useContext(Context);
   const { filterCountries } = FilterCountries();

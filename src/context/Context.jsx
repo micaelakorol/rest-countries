@@ -9,14 +9,14 @@ const UserProvider = ({ children }) => {
   const [value, setValue] = useState("");
   const [region, setRegion] = useState([]);
   const [regionCountries, setRegionCountries] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [message, setMessage] = useState('')
   return (
     <Context.Provider
       value={{
         theme,
         setTheme,
-        mostrarCard,
+        mostrarCard,message, setMessage,
         setMostrarCard,
         value,
         setValue,
@@ -26,8 +26,6 @@ const UserProvider = ({ children }) => {
         setRegionCountries,
         searchParams,
         setSearchParams,
-        loading,
-        setLoading,
       }}
     >
       {children}

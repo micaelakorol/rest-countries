@@ -1,33 +1,26 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Context } from "../../context/Context";
 
 export const RegionFilter = () => {
-  const { setMostrarCard, setRegionCountries, setLoading , value} =
+  const { setMostrarCard, setRegionCountries, setMessage, value } =
     useContext(Context);
 
-  const regionFilter = async() => {
-
+  const regionFilter = async () => {
     if (value.length > 0 || value !== "") {
-      setLoading(true);
+      setMessage("Loading..");
       setMostrarCard(false);
       const url = `https://restcountries.com/v2/region/${value}`;
       try {
         const res = await fetch(url);
         const data = await res.json();
-        setLoading(false);
         setRegionCountries(data);
+        setMessage("");
       } catch (error) {
-        return error;
+        setMessage("error");
       }
     } else {
       setMostrarCard(true);
     }
   };
-
-useEffect(() => {
-regionFilter()
-},[value])
-
   return { regionFilter };
 };

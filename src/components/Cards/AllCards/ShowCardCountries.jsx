@@ -4,13 +4,14 @@ import { useContext } from "react";
 import { Context } from "../../../context/Context";
 import CardBodyCountries from "./CardElements/CardBodyCountries";
 import InfoCardCountries from "./CardElements/InfoCardCountries";
-import FilterCountries from "../../../services/functions/filterCountries";
-
+import FilterCountries from "../../../services/functions/FilterCountries";
+{/** show all card */}
 const ShowCardCountries = ({ data }) => {
-  const { mostrarCard } = useContext(Context);
+  const { mostrarCard, message } = useContext(Context);
   const { filterCountries } = FilterCountries();
   return (
     <main>
+      <h1>{message}</h1>
       {mostrarCard && (
         <div className="container-card">
           {data.filter(filterCountries).map((item) => (

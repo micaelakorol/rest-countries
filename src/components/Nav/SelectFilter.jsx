@@ -1,12 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../context/Context";
-import { RegionFilter } from "../../services/API/requestNav";
+import { RegionFilter } from "../../services/API/RequestRegionFilter";
 import { select } from "../../services/initialValuesSelect/select";
-import CaptureOption from "../../services/functions/captureOption";
+import CaptureOption from "../../services/functions/CaptureOption";
 const SelectFilter = () => {
   const { value } = useContext(Context);
   const { captureSelect } = CaptureOption();
   const { regionFilter } = RegionFilter();
+  
+  useEffect(() => {
+    regionFilter();
+  }, [value]);
+
   return (
     <section className="select">
       <select name="select" value={value} onChange={captureSelect}>
@@ -15,9 +20,7 @@ const SelectFilter = () => {
         </option>
         <option value="">All Countries</option>
         {select.map((item) => (
-          <option key={item.id} onClick={() => regionFilter(value)}>
-            {item.continent}
-          </option>
+          <option key={item.id}>{item.continent}</option>
         ))}
       </select>
     </section>

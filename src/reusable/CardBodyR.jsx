@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/card.css";
+import "../styles/card.css";
 const CardBodyR = ({ imageSrc, title, linkTo, className }) => {
   return (
     <>

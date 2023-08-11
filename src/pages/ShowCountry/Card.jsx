@@ -1,28 +1,25 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { useData } from "../../services/API/service";
 import "../../styles/infoCard.css";
 import { v4 as uuidv4 } from "uuid";
 import CardBody from "./CardElements/CardBody";
 import OtherInfo from "./CardElements/OtherInfo";
 import ImgCard from "./CardElements/ImgCard";
 import BtnBack from "./CardElements/BtnBack";
-import useSpinner from "../../services/hook/useSpinner";
+import { Context } from "../../context/Context";
+import {useRequest } from "../../services/API";
 {
   /*shows the card selected by the user with all the country information*/
 }
 const InfoCard = () => {
+  const { message } = useContext(Context);
   let params = useParams();
-  const { data, loading, error } = useData(
-    `https://restcountries.com/v2/name/${params.id}`
-  );
-
-  const Loading = useSpinner({ loading, error });
+  const { data } = useRequest(`https://restcountries.com/v2/name/${params.id}`);
 
   return (
     <main>
-      {Loading}
+      <h1>{message}</h1>
       {data.map((data) => (
         <div className="container-dinamic" key={uuidv4()}>
           <section className="btn-dinamic">

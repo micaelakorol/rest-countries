@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import arrowLeft from "../../../icons/arrow-left.svg";
+import arrowLeft from "../../../assets/icons/arrow-left.svg";
 
 const BtnBack = () => {
   return (

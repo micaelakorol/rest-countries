@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Error = () => {
   return (
-    <section>Error :(</section>
-  )
-}
+    <section>
+      <h1>Error :(</h1>
+    </section>
+  );
+};
 
-export default Error
+export default Error;

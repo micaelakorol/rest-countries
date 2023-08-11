@@ -1,5 +1,5 @@
 import React from 'react'
-import CardBodyR from '../../../Reusable/CardBodyR'
+import CardBodyR from '../../../../reusable/CardBodyR'
 
 const CardBody = ({item}) => {
   return (

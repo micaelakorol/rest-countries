@@ -1,17 +1,13 @@
 import "../../../styles/card.css";
 import CardRegion from "../FilteredByRegion/ShowCardRegion";
-import { useData } from "../../../services/API/service";
-import CardCountriesUI from "../AllCards/ShowCardCountries";
-import useSpinner from "../../../services/hook/useSpinner";
+import ShowCardCountries from "../AllCards/ShowCardCountries";
+import { useRequest } from "../../../services/API";
 // render both card (AllCard and FilterCard)
 const CardCountries = () => {
-  const { data, loading, error } = useData("https://restcountries.com/v2/all");
-  const Loading = useSpinner({ loading, error });
-
+  const { data } = useRequest("https://restcountries.com/v2/all");
   return (
     <>
-      {Loading}
-      <CardCountriesUI data={data} />
+      <ShowCardCountries data={data} />
       <CardRegion />
     </>
   );

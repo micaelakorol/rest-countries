@@ -3,8 +3,7 @@ import { Context } from '../../context/Context';
 
 const FilterCountries = () => {
     const {searchParams} = useContext(Context)
-     const filter = searchParams.get("filter");
-  
+     const filter = searchParams.get("filter"); 
     const filterCountries = (item) => {
         if (!filter) {
           return true;

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/header.css";
-import moonFill from "../../icons/moon-fill.svg";
-import moon from "../../icons/moon.svg";
+import moonFill from "../../assets/icons/moon-fill.svg";
+import moon from "../../assets/icons/moon.svg";
 import "../../styles/global.css";
 const Header = ({ theme, setTheme }) => {
   const changeTheme = () => {

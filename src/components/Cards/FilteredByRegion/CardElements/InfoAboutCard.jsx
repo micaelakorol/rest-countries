@@ -1,5 +1,5 @@
 import React from 'react'
-import InfoCardR from "../../../Reusable/InfoCardR"
+import InfoCardR from "../../../../reusable/InfoCardR"
 
 const InfoAboutCard = ({item}) => {
   return (
