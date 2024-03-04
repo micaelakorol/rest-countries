@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { Context } from "../../../context/Context";
 import CardBodyCountries from "./CardElements/CardBodyCountries";
 import InfoCardCountries from "./CardElements/InfoCardCountries";
-import FilterCountries from "../../../services/functions/FilterCountries";
+import FilterCountries from "../functions/FilterCountries";
+
 {/** show all card */}
 const ShowCardCountries = ({ data }) => {
   const { mostrarCard, message } = useContext(Context);

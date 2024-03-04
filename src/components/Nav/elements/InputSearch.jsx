@@ -1,5 +1,5 @@
-import "../../styles/nav.css";
-import HandleChangeParams from "../../services/functions/HandleChangeParams";
+import "../../../styles/nav.css";
+import HandleChangeParams from "../functions/HandleChangeParams";
 const InputSearch = () => {
   const { handleChange, searchParams } = HandleChangeParams();
   return (

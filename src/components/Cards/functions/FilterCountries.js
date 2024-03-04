@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Context } from '../../context/Context';
+import { Context } from '../../../context/Context';
 
 const FilterCountries = () => {
     const {searchParams} = useContext(Context)

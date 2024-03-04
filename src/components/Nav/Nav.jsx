@@ -1,9 +1,9 @@
 import React from "react";
 import "../../styles/nav.css";
 import "../../styles/global.css";
-import CardCountries from "../Cards/Render/CardCountries";
-import InputSearch from "./InputSearch";
-import SelectFilter from "./SelectFilter";
+import RenderCardCountries from "../Cards/RenderCardCountries";
+import InputSearch from "./elements/InputSearch";
+import SelectFilter from "./elements/SelectFilter";
 const Nav = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const Nav = () => {
         <InputSearch />
         <SelectFilter />
       </nav>
-      <CardCountries />
+      <RenderCardCountries />
     </>
   );
 };

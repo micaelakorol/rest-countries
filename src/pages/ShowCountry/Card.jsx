@@ -8,7 +8,7 @@ import OtherInfo from "./CardElements/OtherInfo";
 import ImgCard from "./CardElements/ImgCard";
 import BtnBack from "./CardElements/BtnBack";
 import { Context } from "../../context/Context";
-import {useRequest } from "../../services/API";
+import {useRequest}  from "../../services/hook/useRequest";
 {
   /*shows the card selected by the user with all the country information*/
 }
